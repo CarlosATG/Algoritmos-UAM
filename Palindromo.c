@@ -4,8 +4,8 @@ int main(){
 	int h;//Tamaño del arreglo
 	int i;//Variable para ciclo for del arreglo
 	int j;// Variable para el ciclo for del arreglo invertido
-	int x,y,z;//Variables para guardar valor de comparasión de arreglos
-	printf ("Bienvenido a tu visualizador de arreglos favorito \nDe cuantoas valores sera tu arreglo\t");//Interfaz
+	int x,y,z;//Variables para guardar valor de comparación de arreglos
+	printf ("Bienvenido a tu visualizador de arreglos favorito \nDe cuantos valores sera tu arreglo\t");//Interfaz
 	scanf("%i", &h);//Obtenemos tamaño de arreglo
 	int arreglo[h];//Arreglo principal
 	int oglerra[h];//Arreglo invertido
