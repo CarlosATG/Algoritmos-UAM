@@ -35,14 +35,14 @@ if (z == 0){//Si la suma de todas las restas es 0, h veces, entonces es un palin
 			{
 			printf("%i\t", oglerra[j]);
 			}
-		printf("\nFelicidades, tu vector es un palindromo");
+		printf("\nFelicidades, tu vector es un es un numero capicua");
 	}
 else{//de lo contrario no es un palindromo
 			for(j=0; j<h; j++)
 				{
 				printf("%i\t", oglerra[j]);
 				}
-			printf("\nFuchi, tu vector no es un palindromo");
+			printf("\nFuchi, tu vector no es un numero capicua");
 	}
 return 0;
 }
