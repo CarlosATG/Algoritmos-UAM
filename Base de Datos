@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <string.h>
+
+void Informacion (char** Nombre, int * Neconomico, float* salario);
+
+	
+int main(){
+  struct empleado{
+     char* nombre;
+     int neconomico;
+     float salario;
+  };
+  struct empleado empleado1;
+  empleado1.nombre = "Carlos Torres Garcia";
+  empleado1.neconomico = 32415;
+  empleado1.salario = 50500;
+  struct empleado empleado2;
+  empleado2.nombre = "Karen Monreal Garza";
+  empleado2.neconomico = 67629; 
+  empleado2.salario = 60000;
+  struct empleado empleado3;
+  empleado3.nombre = "Eduardo Ceervantez Tellez";
+  empleado3.neconomico = 89785;
+  empleado3.salario = 29500;
+  struct empleado empleado4;
+  empleado4.nombre = "Luisa Fromo Aguilar";
+  empleado4.neconomico = 97587;
+  empleado4.salario = 45000;
+  struct empleado empleado5;
+  int New=0;
+  
+    printf("\t\tBienvenido Usario");//Mensaje de bienvenida
+	int a;//variable local para nuestro switch
+	//Menu de opciones
+	do{
+        printf("\nSeleccione una de las siguientes opciones:\n");
+	printf("0) Salir\n");
+	printf("1) Conocer informacion de un empleado\n");
+	printf("2) Agregar nuevo empleado\n");
+	scanf("%i", &a);//valor de nuestro switch
+	switch (a)
+		{
+		case 1:
+			printf("De que empleado quieres conocer?\n");//Menu para Funcion de peso
+			int Name;
+			printf("1) %s\n", empleado1.nombre);
+			printf("2) %s\n", empleado2.nombre);
+			printf("3) %s\n", empleado3.nombre);
+			printf("4) %s\n", empleado4.nombre);
+			if (New == 1){
+ 				printf("5) %s\n", empleado5.nombre);				
+			}
+			scanf("%i", &Name);
+			switch(Name)
+				{
+				case 1:
+				Informacion(&empleado1.nombre, &empleado1.neconomico, &empleado1.salario); 
+				break;
+
+				case 2:
+				Informacion(&empleado2.nombre, &empleado2.neconomico, &empleado2.salario);
+				break;
+				case 3:
+				Informacion(&empleado3.nombre, &empleado3.neconomico, &empleado3.salario);
+				break;
+				case 4:
+				Informacion(&empleado4.nombre, &empleado4.neconomico, &empleado4.salario);
+				break;
+                                case 5:
+				Informacion(&empleado5.nombre, &empleado5.neconomico, &empleado5.salario);
+				break;
+		     }
+			break;
+		case 2:
+                        printf("Como se llama el nuevo empleado\t");
+			scanf("%s", &empleado5.nombre);
+			printf("%s cual es el su numero economico\t",&empleado5.nombre);
+			scanf("%i", &empleado5.neconomico);
+			printf("Cual es su salario\t");
+			scanf("%f", &empleado5.salario);
+			New = 1;
+			Informacion(&empleado5.nombre, &empleado5.neconomico, &empleado5.salario);
+			break;
+}
+}
+while (a!=0);
+return 0;
+}
+void Informacion (char** Nombre, int * Neconomico, float* salario){
+	printf("%s\nNumero economico:%i\nSalario neto $%.2f\n\n", *Nombre, *Neconomico, *salario);
+}
