@@ -24,12 +24,18 @@ int main(){
 	printf("Escribe que elemento de la pila te gustaria buscar\t");
 	scanf(" %c", &busca);
 	printf("%c", busca);
-	while(PilaVacia(Original)!=1 || verificar==1){//Ciclo para comparar elementos
+	while(PilaVacia(Original)!=1){//Ciclo para comparar elementos
 	Desapilar(&Original, &element);
 	if(element==busca){
 	verificar = 1;
 	}
 	Apilar(&Reserva, &element);
+	}
+	if (verificar==1){
+	printf("el elemento %c esta en tu pila", busca);
+	}
+	else{
+	printf("%c no esta en tu pila", busca);
 	}	
 	while(PilaVacia(Reserva)!=1){//Ciclo para restablecer pila original
 	Desapilar(&Reserva, &element);
